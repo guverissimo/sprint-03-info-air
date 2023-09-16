@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,900&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
+.navegacao {
+    grid-area: nav;
+    padding: auto;
+    background-color: var(--bg-color);
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 100px;
+}
+
+.link {
+    color: var(--text-color) ;
+    text-decoration: none;
+}

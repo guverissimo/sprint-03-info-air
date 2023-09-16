@@ -1,0 +1,14 @@
+.rodape{
+    grid-area: footer;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.rodape a {
+    text-decoration: none;
+    color: black;
+}
