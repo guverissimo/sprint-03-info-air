@@ -1,15 +1,13 @@
 import React, { useState } from "react";
+import LoginImg from '../../assets/login.jpg'
+import Home from '../Home'
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 
 const Login = () => {
 
-	const [username, setUsername] = useState()
-	const [password, setPassword] = useState()
 	const [userLogin, setUserLogin] = useState()
 	const [passwordLogin, setPasswordLogin] = useState()
-
-	const armazenar = (chave, valor) => {
-		localStorage.setItem(chave, valor)
-	}
 
 	const validarUsuario = (chave) => {
 		const pegarDados = localStorage.getItem(chave, JSON.stringify(chave));
@@ -30,43 +28,45 @@ const Login = () => {
 		event.preventDefault();
 
 		if (userLogin == validarUsuario(userLogin) && passwordLogin == validarSenha(userLogin)) {
-			console.log("Usuario Logado com sucesso")
+			Swal.fire({
+				position: 'top-end',
+				icon: 'success',
+				title: 'Logado com sucesso!',
+				showConfirmButton: false,
+				timer: 1500
+			  })
 		} else {
-			console.log("Vai dormir")
+			Swal.fire({
+				icon: 'error',
+				title: 'Oops...',
+				text: 'Credenciais incorretas!',
+			  })
 		}
 	}
 
 
 	return (
 		<>
-			<div className="login__container">
-				<fieldset id="formulario">
-					<legend>Cadastrar Usuario</legend>
-					<fieldset class="box">
-						<legend for="usuario">Usuario</legend>
-						<input type="text" value={username} onChange={(e) => setUsername(e.target.value)} id="usuario" placeholder="Digite seu usúario..." />
-					</fieldset>
-					<div class="box">
-						<label for="campo1">Senha</label>
-						<input type="password" value={password} onChange={(e) => setPassword(e.target.value)} id="campo1" placeholder="Digite sua senha..." />
-					</div>
-					<button type="submit" onClick={() => armazenar(username, [username, password])} id="btnSubmit">Cadastrar</button>
-				</fieldset>
-			</div>
-			<div>
-				<fieldset id="formulario">
-					<legend>Login</legend>
-					<fieldset>
-						<label for="login-usuario">Usuario</label>
-						<input type="text" id="login-usuario" value={userLogin} onChange={(e) => setUserLogin(e.target.value)} placeholder="Digite seu usuario" />
-					</fieldset>
-					<fieldset>
-						<label for="login-password">senha</label>
-						<input type="password" id="login-password" value={passwordLogin} onChange={(e) => setPasswordLogin(e.target.value)} placeholder="digite sua senha" />
-					</fieldset>
-					<button type="submit" onClick={() => logar(userLogin, passwordLogin)} id="btnLogar">Logar</button>
-				</fieldset>
-			</div>
+			<container className='cadastro__container'>
+                <form id="form">
+                    <h2>Login</h2>
+					<p>Certifique-se que você fez seu cadastro!</p>
+                    <img className='form-img' src={LoginImg} alt="" />
+                    <div>
+                        <div id="texto">
+                            <label for="nome">Usuario</label>
+                            <input id="nome" value={userLogin} onChange={(e) => setUserLogin(e.target.value)} type="text" name="nome" placeholder="Insira seu Nome" minlength="3" required />
+                            <span id="spanNome">Insira seu usuário </span>
+                        </div>
+                        <div id="texto">
+                            <label for="senha">Senha</label>
+                            <input id="senha" type="password" vvalue={passwordLogin} onChange={(e) => setPasswordLogin(e.target.value)} name="senha" placeholder="Insira sua senha" required />
+                            <span id="spanEmail">Insira sua senha senha</span>
+                        </div>
+                    </div>
+                    <input type="submit" onClick={() => logar(userLogin, passwordLogin)} id="botao" />
+                </form>
+            </container>
 		</>
 	)
 }
