@@ -90,7 +90,7 @@ const Login = () => {
 					<h4>Ainda não temos nada por aqui! <br />
 					Avisaremos assim que houver novidades!</h4>
 				</div>
-				<img src={ContrucaoImg} alt="Desenho de uma construcao" />
+				<img className="construcao-img" src={ContrucaoImg} alt="Desenho de uma construcao" />
 			</div>
 		</section>
 	)

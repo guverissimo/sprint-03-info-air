@@ -101,6 +101,7 @@ form input[type="submit"]:hover {
 
 .construcao img{
     margin-bottom: 2rem;
+    width: 100%;
 }
 
 .construcao-textos {
@@ -116,3 +117,10 @@ form input[type="submit"]:hover {
     font-size: 18px;
     color: #616161;
 }
+
+/* @media screen and (max-width: 526px) {
+    .construcao-img{
+        width: 100%;
+    }
+    
+  } */
