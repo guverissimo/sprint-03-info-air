@@ -5,7 +5,6 @@ import facebook from '../../assets/icons8-facebook-50.png'
 import instagram from '../../assets/icons8-instagram-50.png'
 import tiktok from '../../assets/icons8-tiktok-50.png'
 import whatsapp from '../../assets/icons8-whatsapp-50.png'
-import GoogleMaps from "./GoogleMapa";
 
 const Footer = () => {
 

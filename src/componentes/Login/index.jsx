@@ -5,6 +5,8 @@ import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
 import './Login.css'
 
+import { BsDoorClosed } from "react-icons/bs";
+
 const Login = () => {
 
 	const [userLogin, setUserLogin] = useState()
@@ -76,19 +78,24 @@ const Login = () => {
 		)
 	}
 
-	
+
 
 	return (
 		<section className="logged">
 			<div className="topo">
-				<button onClick={()=> setIsLogado(false) }>Sair</button>
+				<button onClick={() => setIsLogado(false)}>
+					<div className="closebtn">
+						<BsDoorClosed />
+						<p>Sair</p>
+					</div>
+				</button>
 			</div>
 			<h1>Bem-vindo, <span>{userLogin}</span>!</h1>
 			<div className="construcao">
 				<div className="construcao-textos">
 					<h2>Oops..</h2>
 					<h4>Ainda não temos nada por aqui! <br />
-					Avisaremos assim que houver novidades!</h4>
+						Avisaremos assim que houver novidades!</h4>
 				</div>
 				<img className="construcao-img" src={ContrucaoImg} alt="Desenho de uma construcao" />
 			</div>
