@@ -1,64 +1,47 @@
-import { } from 'react'
+import { useState } from 'react'
 import './Cadastro.css'
 import Ilustracao from '../../assets/ilustracao-alerta.jpg'
 
-// const emailInput = document.getElementById("email");
-// const span = document.getElementById("spanEmail");
-// const email = emailInput.value;
-// const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-
-
-
-// function validarEmail() {
-
-    
-//     if (regex.test(email)) {
-//     }
-//     else {
-//         emailInput.style.border = '2px solid #e63636';
-//         span.style.display = 'block';
-//         span.style.fontSize = '12px';
-//         span.style.color = '#e63636';
-//         span.style.textAlign = 'center';
-//         span.style.marginBottom = '4px';
-//     }
-// }
-
-// emailInput.addEventListener('click', validarEmail())
-
 const Cadastro = () => {
+    
+    const [username, setUsername] = useState()
+	const [password, setPassword] = useState()
+
+    const armazenar = (chave, valor) => {
+        event.preventDefault();
+        
+		localStorage.setItem(chave, valor)
+	}
+
     return (
         <>
             <container className='cadastro__container'>
-                <div className='cadastro__title'>
-                    
-                    <img src={Ilustracao} alt="" />
-                </div>
                 <form id="form">
                     <h2 >Cadastre-se para receber as novidades</h2>
+                    <img className='form-img' src={Ilustracao} alt="" />
                     <div>
                         <div id="texto">
                             <label for="nome">Nome</label>
-                            <input id="nome" type="text" name="nome" placeholder="Insira seu Nome" minlength="3" required />
+                            <input id="nome" value={username} onChange={(e) => setUsername(e.target.value)} type="text" name="nome" placeholder="Insira seu Nome" minlength="3" required />
                             <span id="spanNome">Insira um Nome válido</span>
                         </div>
                         <div id="texto">
-                            <label for="email">E-mail</label>
-                            <input id="email" type="email" name="email" placeholder="Insira seu E-mail" required />
-                            <span id="spanEmail">Insira um E-mail válido</span>
+                            <label for="senha">Cadastre senha</label>
+                            <input id="senha" type="password" value={password} onChange={(e) => setPassword(e.target.value)} name="senha" placeholder="Insira sua senha" required />
+                            <span id="spanEmail">Insira uma senha</span>
                         </div>
                     </div>
                     <div className="checkbox">
-                        <div>
+                        <div className='chebox-box'>
                             <input id="politicas" type="checkbox" name="politicas" required />
                             <label for="politicas">Confirmo que li e aceito as Políticas de Privacidade da InfoAir</label>
                         </div>
-                        <div>
+                        <div className='chebox-box'>
                             <input id="notificacao" type="checkbox" name="notificacao" required />
                             <label for="notificacao">Concordo em receber atualizações sobre a InfoAir via E-mail</label>
                         </div>
                     </div>
-                    <input type="submit" value="Enviar" id="botao" onclick="validarEmail()" />
+                    <input type="submit"  onClick={() => armazenar(username, [username, password])} id="botao" onclick="validarEmail()" />
                 </form>
             </container>
         </>

@@ -15,10 +15,10 @@ const Navegacao = () => {
   return (
     <>
       <Navbar expand="md" className="navegacao">
-        <Container className="gap-5">
+        <Container className="gap-5 navegation" >
           <img className="logo-img" src={logo} alt="" />
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Collapse id="basic-navbar-nav ">
             <Nav className="me-auto ">
               <Nav.Link>
                 <NavLink className="link" to='/'>Home</NavLink>

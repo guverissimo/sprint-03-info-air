@@ -5,16 +5,15 @@ import styles from './MapaPoluicao.module.css'
 
 const MapaPoluicao = () => {
     return (
-        <section className={styles.MapaPoluicao}>
-            <div className={styles.ImgMapaPoluicao}>
-                <img src={ImgMapaPoluicao} alt="" />
+        <>
+            <section className={styles.MapaPoluicao}>
+                <img className={styles.ImgMapaPoluicao} src={ImgMapaPoluicao} alt="" />
                 <div className={styles.ImgRanking}>
                     <h1>Paises com os piores indices de qualidade do ar</h1>
                     <img src={ImgRanking} alt="" />
                 </div>
-            </div>
-
-        </section>
+            </section>
+        </>
     )
 }
 

@@ -1,17 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,900&display=swap');
 @import 'bootstrap/dist/css/bootstrap.min.css';
-.navegacao {
-    grid-area: nav;
-    padding: auto;
-    background-color: var(--bg-color);
-    text-decoration: none;
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.logo-img {
-    width: 100px;
+.navegacao {
+    grid-area: nav;
+    width: 100%;
+    background-color: var(--bg-color);
+    text-decoration: none;
+    padding: 1rem;
 }
+
+.navegation {
+    display: flex;
+    justify-content: start
+    ;
+}
+
 
 .link {
     color: var(--text-color) ;
     text-decoration: none;
+}
+
+.logo-img {
+    width: 200px;
 }

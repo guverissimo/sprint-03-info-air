@@ -9,29 +9,26 @@ import GoogleMaps from "./GoogleMapa";
 
 const Footer = () => {
 
-    return (
-        <>
-            <div className="rodape">
-                <div className="location">
-                    <header className="header-rodape">
-                        <div className="textos-social">
-                            <div className="textos">
-                                <h1>Onde nos encontrar?</h1>
-                                <p>Av. Paulista, 1106 - 7º andar - Bela Vista, São Paulo - SP, 01311-000</p>
-                            </div>
-                            <div className="redes-sociais">
-                                <img className="rede-social" src={facebook} alt="" />
-                                <img className="rede-social" src={instagram} alt="" />
-                                <img className="rede-social" src={tiktok} alt="" />
-                                <img className="rede-social" src={whatsapp} alt="" />
-                            </div>
-                        </div>
-                        <img src={MapaRodape} alt="Onde nos encontrar" />
-                    </header>
-                </div>
+  return (
+    <>
+      <div className="rodape">
+          <div className="textos-social">
+            <div className="textos">
+              <h1>Onde nos encontrar?</h1>
+              <p>Av. Paulista, 1106 -
+                Bela Vista, São Paulo - SP, 01311-000</p>
             </div>
-        </>
-    )
+            <div className="redes-sociais">
+              <img className="rede-social" src={facebook} alt="" />
+              <img className="rede-social" src={instagram} alt="" />
+              <img className="rede-social" src={tiktok} alt="" />
+              <img className="rede-social" src={whatsapp} alt="" />
+            </div>
+          </div>
+          <img className="Img-Rodape" src={MapaRodape} alt="Onde nos encontrar" />
+      </div>
+    </>
+  )
 
 }
 
