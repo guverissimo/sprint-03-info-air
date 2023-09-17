@@ -17,13 +17,12 @@ const Cadastro = () => {
         
         if(username != password){
             Swal.fire({
-                title: 'Boa!',
-                text: 'Cadastrado com sucesso!.',
-                imageUrl: '../../assets/cadastrado.jpg',
-                imageWidth: 400,
-                imageHeight: 200,
-                imageAlt: {cadastradoImg},
-            })
+				position: 'top-end',
+				icon: 'success',
+				title: 'Cadastrado com sucesso!',
+				showConfirmButton: false,
+				timer: 1500
+			})
         } else {
             Swal.fire({
 				icon: 'error',

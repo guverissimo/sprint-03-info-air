@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import LoginImg from '../../assets/login.jpg'
+import ContrucaoImg from '../../assets/construcao.png'
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
 import './Login.css'
@@ -77,14 +78,20 @@ const Login = () => {
 
 	
 
-
 	return (
 		<section className="logged">
 			<div className="topo">
-				<h1>Usuarios cadastrados</h1>
 				<button onClick={()=> setIsLogado(false) }>Sair</button>
 			</div>
-			<p></p>
+			<h1>Bem-vindo, <span>{userLogin}</span>!</h1>
+			<div className="construcao">
+				<div className="construcao-textos">
+					<h2>Oops..</h2>
+					<h4>Ainda não temos nada por aqui! <br />
+					Avisaremos assim que houver novidades!</h4>
+				</div>
+				<img src={ContrucaoImg} alt="Desenho de uma construcao" />
+			</div>
 		</section>
 	)
 
