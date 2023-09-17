@@ -1,0 +1,12 @@
+.container__saude{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    margin: 3rem auto;
+}
+
+.container__saude > p {
+    width: 70%;
+    padding-top: 1rem;
+}

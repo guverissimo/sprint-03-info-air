@@ -1,14 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 .rodape{
     grid-area: footer;
     background-color: var(--bg-color);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     gap: 1rem;
+    height: auto;
+    padding: 1rem;
 }
 
 .rodape a {
     text-decoration: none;
     color: black;
+}
+
+.header-rodape {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.header-rodape >img {
+    width: 200px;
+}
+
+.textos {
+    align-items: center;
+    justify-content: center;
+}
+
+.textos h1 {
+    font-size: 32px;
+}
+
+.textos p {
+    font-size: 18px;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 4rem
 }

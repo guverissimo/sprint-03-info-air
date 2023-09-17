@@ -39,9 +39,6 @@ const Navegacao = () => {
                 <NavDropdown.Item href="#action/3.3">
                   <NavLink className="link" to='MapaPoluicao'>Mapa de Poluicao</NavLink>
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  <NavLink className="link" to='Forum'>Forum</NavLink>
-                </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link>
                 <NavLink className="link" to='Login'>Login</NavLink>
@@ -49,9 +46,7 @@ const Navegacao = () => {
             </Nav>
           </Navbar.Collapse>
         </Container>
-
       </Navbar>
-
     </>
   )
 

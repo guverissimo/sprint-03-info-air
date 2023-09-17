@@ -1,28 +1,30 @@
 import { } from 'react'
 import './Cadastro.css'
-
-const emailInput = document.getElementById("email");
-const span = document.getElementById("spanEmail");
-const email = emailInput.value;
-const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 import Ilustracao from '../../assets/ilustracao-alerta.jpg'
 
+// const emailInput = document.getElementById("email");
+// const span = document.getElementById("spanEmail");
+// const email = emailInput.value;
+// const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
-function validarEmail() {
 
-    if (regex.test(email)) {
-    }
-    else {
-        emailInput.style.border = '2px solid #e63636';
-        span.style.display = 'block';
-        span.style.fontSize = '12px';
-        span.style.color = '#e63636';
-        span.style.textAlign = 'center';
-        span.style.marginBottom = '4px';
-    }
-}
 
-emailInput.addEventListener('click', validarEmail())
+// function validarEmail() {
+
+    
+//     if (regex.test(email)) {
+//     }
+//     else {
+//         emailInput.style.border = '2px solid #e63636';
+//         span.style.display = 'block';
+//         span.style.fontSize = '12px';
+//         span.style.color = '#e63636';
+//         span.style.textAlign = 'center';
+//         span.style.marginBottom = '4px';
+//     }
+// }
+
+// emailInput.addEventListener('click', validarEmail())
 
 const Cadastro = () => {
     return (
