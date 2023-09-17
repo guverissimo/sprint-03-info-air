@@ -1,5 +1,5 @@
 import {} from 'react'
-import AppStore from '../../assets/AppStore.png'
+import AppStore from '../../assets/appStore.png'
 import GooglePlay from '../../assets/googlePlay.png'
 import styles from './Home.module.css'
 
