@@ -36,6 +36,15 @@
   justify-content: space-around;
 }
 
+.rede-social {
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.rede-social:hover {
+  background-color: aliceblue;
+}
+
 .Img-Rodape {
   width: 300px;
   margin: 3rem;

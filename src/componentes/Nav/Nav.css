@@ -9,9 +9,11 @@
 .navegacao {
     grid-area: nav;
     width: 100%;
-    background-color: var(--bg-color);
     text-decoration: none;
     padding: 1rem;
+
+    background: rgb(212,248,255);
+background: linear-gradient(156deg, rgba(212,248,255,1) 0%, rgba(87,179,180,1) 46%, rgba(77,79,143,1) 100%);
 }
 
 .navegation {
@@ -22,6 +24,10 @@
 .link {
     color: var(--text-color) ;
     text-decoration: none;
+}
+
+.link:hover{
+    color: black;
 }
 
 .logo-img {

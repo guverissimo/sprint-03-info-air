@@ -13,15 +13,23 @@ const Footer = () => {
       <div className="rodape">
           <div className="textos-social">
             <div className="textos">
-              <h1>Onde nos encontrar?</h1>
+              <h1>Contato</h1>
               <p>Av. Paulista, 1106 -
                 Bela Vista, São Paulo - SP, 01311-000</p>
             </div>
             <div className="redes-sociais">
-              <img className="rede-social" src={facebook} alt="" />
-              <img className="rede-social" src={instagram} alt="" />
-              <img className="rede-social" src={tiktok} alt="" />
-              <img className="rede-social" src={whatsapp} alt="" />
+              <a href="https://www.facebook.com/fiap?ref=embed_page" target="blank">
+                <img className="rede-social" src={facebook} alt="" />
+              </a>
+              <a href="https://www.instagram.com/" target="blank">
+                <img className="rede-social" src={instagram} alt="" />
+              </a>
+              <a href="https://www.tiktok.com/pt-BR/" target="blank">
+                <img className="rede-social" src={tiktok} alt="" />
+              </a>
+              <a href="https://web.whatsapp.com/" target="blank">
+                <img className="rede-social" src={whatsapp} alt="" />
+              </a>
             </div>
           </div>
           <img className="Img-Rodape" src={MapaRodape} alt="Onde nos encontrar" />
