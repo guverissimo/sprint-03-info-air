@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import './Cadastro.css'
 import Ilustracao from '../../assets/ilustracao-alerta.jpg'
+import cadastradoImg from '../../assets/cadastrado.jpg'
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 
 const Cadastro = () => {
     
@@ -11,8 +14,26 @@ const Cadastro = () => {
         event.preventDefault();
         
 		localStorage.setItem(chave, valor)
+        
+        if(username != password){
+            Swal.fire({
+                title: 'Boa!',
+                text: 'Cadastrado com sucesso!.',
+                imageUrl: '../../assets/cadastrado.jpg',
+                imageWidth: 400,
+                imageHeight: 200,
+                imageAlt: {cadastradoImg},
+            })
+        } else {
+            Swal.fire({
+				icon: 'error',
+				title: 'Oops...',
+				text: 'Digite a senha diferente do nome de usuario!',
+			  })
+        }
 	}
 
+    console.log(username)
     return (
         <>
             <container className='cadastro__container'>
@@ -21,12 +42,12 @@ const Cadastro = () => {
                     <img className='form-img' src={Ilustracao} alt="" />
                     <div>
                         <div id="texto">
-                            <label for="nome">Nome</label>
+                            <label for="nome">Cadastre um usuário</label>
                             <input id="nome" value={username} onChange={(e) => setUsername(e.target.value)} type="text" name="nome" placeholder="Insira seu Nome" minlength="3" required />
                             <span id="spanNome">Insira um Nome válido</span>
                         </div>
                         <div id="texto">
-                            <label for="senha">Cadastre senha</label>
+                            <label for="senha">Cadastre uma senha</label>
                             <input id="senha" type="password" value={password} onChange={(e) => setPassword(e.target.value)} name="senha" placeholder="Insira sua senha" required />
                             <span id="spanEmail">Insira uma senha</span>
                         </div>
