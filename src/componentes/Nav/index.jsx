@@ -31,13 +31,13 @@ const Navegacao = () => {
               </Nav.Link>
               <NavDropdown title="Saude" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">
-                  <NavLink className="link" to='Saude'>Saude</NavLink>
+                  <NavLink className="link" to='Saude'>Saúde</NavLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
-                  <NavLink className="link" to='Prevencao'>Prevencao</NavLink>
+                  <NavLink className="link" to='Prevencao'>Prevenção</NavLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">
-                  <NavLink className="link" to='MapaPoluicao'>Mapa de Poluicao</NavLink>
+                  <NavLink className="link" to='MapaPoluicao'>Mapa de Poluição</NavLink>
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link>
