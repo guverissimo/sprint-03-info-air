@@ -29,7 +29,7 @@ const Navegacao = () => {
               <Nav.Link>
                 <NavLink className="link" to='Cadastro'>Cadastro</NavLink>
               </Nav.Link>
-              <NavDropdown title="Saude" id="basic-nav-dropdown">
+              <NavDropdown title="Saúde" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">
                   <NavLink className="link" to='Saude'>Saúde</NavLink>
                 </NavDropdown.Item>
